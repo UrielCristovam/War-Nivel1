@@ -64,7 +64,7 @@ void entradaDoUsuario(struct Territorio *t, int indice){
     printf("Digite o numero de tropas que deseja alocar:\n");
 
     if(fgets(buffer, sizeof(buffer), stdin) != NULL){
-        limparBufferEntrada(); // Remova o parâmetro (buffer)
+
         t->numeroDeTropas = atoi(buffer);
     }else{
         t -> numeroDeTropas = 0;
@@ -74,8 +74,6 @@ void entradaDoUsuario(struct Territorio *t, int indice){
     if(t -> numeroDeTropas == 0 && (buffer)[0] != '0'){
         limparBufferEntrada();
     }
-
-    limparBufferEntrada();
 
     printf("Qual é o nome do seu território?\n");
     scanf("%49s", t->NomeTerritorio);
